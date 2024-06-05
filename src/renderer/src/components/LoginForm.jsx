@@ -4,6 +4,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import { useNavigate } from 'react-router-dom';
 import * as yup from 'yup';
 import axios from 'axios';
+import Header from './Header';
 
 
 const schema = yup.object().shape({
@@ -44,6 +45,8 @@ const Login = () => {
                 <p>{errors.password?.message}</p>
             </div>
             <button type="submit">Login</button>
+
+            <Header />
         </form>
     );
 }
